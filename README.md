@@ -25,7 +25,7 @@ link.
 ### Tasks
 - [ ] Add any JS, CSS or HTML necessary to display the graph portion of the
     `StockQuoteCard` as shown in the design mocks.
-- [ ] Replace color values with variables from `./src/variables.scss`.
+- [x] Replace color values with variables from `./src/variables.scss`.
 - [ ] Add styles to `./src/Main/main.scss` so that the application matches the design.
 - [ ] Complete the `mainView.on("stockSearch"...` callback function in `./src/index.js`
 - [ ] Alphavantage returns a 200 response even in the cases that the symbol
