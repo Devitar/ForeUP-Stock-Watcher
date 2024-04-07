@@ -19,7 +19,7 @@ export const StockQuoteCollection = Backbone.Collection.extend({
 
 export const createFromGlobalQuote = (globalQuote, name) => {
     return new StockQuoteModel({
-        name: name || globalQuote["01. symbol"],
+        name: name ?? globalQuote["01. symbol"],
         symbol: globalQuote["01. symbol"],
         open: globalQuote["02. open"],
         high: globalQuote["03. high"],
