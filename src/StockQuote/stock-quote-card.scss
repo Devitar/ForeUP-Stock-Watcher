@@ -39,7 +39,8 @@
                 position: absolute;
                 left: 50%;
                 color: $white;
-                font-size: .5rem;
+                font-size: .6rem;
+                font-weight: bold;
             }
 
             .stock-high {
@@ -74,26 +75,73 @@
         background-color: $white;
     }
 
+    .stock-price-arrow {
+        position: relative;
+        width: 0.65rem;
+        height: 0.65rem;
+        margin-left: 10px;
+        margin-right: 5px;
+
+        .down-arrow,.up-arrow {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+    }
+
 .stock-title {
     font-size: 1.1em;
-    color: $dark-blue;
+    font-weight: bold;
+    color: $type;
     text-transform: uppercase;
     margin-bottom: 0;
 }
 
 .stock-symbol-label {
     font-size: 0.8em;
+    font-weight: bold;
     text-transform: uppercase;
     line-height: .7em;
-    color: $charcoal;
+    color: $caption;
 }
 
 .stock-price {
     font-size: 1.3em;
-    color: $dark-blue;
+    color: $type;
     margin-top: 5px;
+
+    // Display correct arrow and font color based on Stock data state
+    &.is-up {
+        .up-arrow {
+            display: inline-block;
+            // Convert from black to green
+            filter: invert(40%) sepia(63%) saturate(5003%) hue-rotate(126deg) brightness(98%) contrast(103%);
+        }
+        .stock-price-change-amount {
+            color: $stock-graph-dark-green;
+        }
+        .stock-price-change-percent {
+            color: $bright-green;
+        }
+    }
+    &.is-down {
+        .down-arrow {
+            display: inline-block;
+            // Convert from black to red
+            filter: invert(19%) sepia(67%) saturate(2106%) hue-rotate(351deg) brightness(88%) contrast(117%);
+        }
+        .stock-price-change-amount {
+            color: $stock-graph-dark-red;
+        }
+        .stock-price-change-percent {
+            color: $stock-graph-red;
+        }
+    }
 }
-    .stock-price-change {
+    .stock-price-change-amount, .stock-price-change-percent {
         font-size: .7em;
     }
 
@@ -103,5 +151,11 @@
 }
     .stock-recent-performance-detail {
         margin-right: 5px;
+        font-weight: 600;
+        color: $caption;
+
+        .stock-recent-performance-detail-bold {
+            color: $type;
+        }
     }
 

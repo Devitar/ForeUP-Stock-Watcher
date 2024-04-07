@@ -49,8 +49,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const upTestData2 = {
         "01. symbol": "IBM2",
         "02. open": "188.5900",
-        "03. high": "190.3200",
-        "04. low": "188.0200",
+        "03. high": "290.3200",
+        "04. low": "8.0200",
         "05. price": "189.1400",
         "06. volume": "2012428",
         "07. latest trading day": "2024-04-05",
@@ -70,9 +70,9 @@ document.addEventListener('DOMContentLoaded', () => {
         "09. change": "-0.0100",
         "10. change percent": "-0.4082%"
     };
-    addNewQuoteToCollection(upTestData, "IBM");
-    addNewQuoteToCollection(upTestData2, "IBM");
-    addNewQuoteToCollection(downTestData, "SHZ");
+    addNewQuoteToCollection(upTestData, "IBM (Test Data)");
+    addNewQuoteToCollection(upTestData2, "IBM2 (Test Data)");
+    addNewQuoteToCollection(downTestData, "SHZ (Test Data)");
 
     mainView.on('stockSearch', function(e) {
         const searchSymbol = e.symbol;
