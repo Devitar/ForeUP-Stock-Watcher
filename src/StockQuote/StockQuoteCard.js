@@ -3,6 +3,11 @@ import template from './StockQuoteCard.html';
 import _ from 'underscore';
 import './stock-quote-card.scss';
 
+const usdFormat = new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD',
+});
+
 export const StockQuoteCard = Marionette.View.extend({
     tagName: 'section',
     className: 'stock-card',
@@ -14,7 +19,7 @@ export const StockQuoteCard = Marionette.View.extend({
              * @param {number|string} value
              * @returns {*}
              */
-            formatMoney: value => value, // @TODO - complete the format money method, don't just return the input.
+            formatMoney: value => usdFormat.format(value),
         };
     },
 });
