@@ -1,1 +1,6 @@
 // @TODO - add necessary styles to achieve the grid like view in the design.
+@import "../variables.scss";
+
+#stock-search-input-label {
+    color: $bright-red;
+}

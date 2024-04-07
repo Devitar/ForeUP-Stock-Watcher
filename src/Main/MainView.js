@@ -10,6 +10,7 @@ const MainView = Marionette.View.extend({
     ui: {
         stockSearchForm: '#stock-search',
         stockSearchInput: '#stock-search-input',
+        stockSearchWarning: '#stock-search-input-label',
         stockSearchButton: '#stock-search-button'
     },
 
@@ -24,12 +25,12 @@ const MainView = Marionette.View.extend({
         const symbol = this.ui.stockSearchInput.val();
 
         if (symbol.length < 1) {
-            // @TODO - show the user a warning here
-            console.warn('No input detected, aborting search');
+            this.ui.stockSearchWarning.html('You must input a Stock Symbol.')
 
             return;
         }
 
+        this.ui.stockSearchWarning.html('')
         this.ui.stockSearchInput.val('');
 
         this.trigger('stockSearch', {symbol: symbol.toUpperCase()});
