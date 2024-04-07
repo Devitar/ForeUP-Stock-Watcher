@@ -1,9 +1,9 @@
 <div class="stock-card-left">
-    <div class="stock-graph">
+    <div class="stock-graph <%- getIsUpClassName(changePercent) %>">
         <div class="stock-line-indicator"></div>
-        <div class="stock-arrow">⮞</div>
-        <div class="stock-high"><%- high %></div>
-        <div class="stock-low"><%- low %></div>
+        <div class="stock-arrow" style="bottom: <%- getArrowPositionPercent(high, low, open) %>%">⮞</div>
+        <div class="stock-high"><%- formatMoney(high) %></div>
+        <div class="stock-low"><%- formatMoney(low) %></div>
     </div>
 </div>
 <div class="stock-card-right">

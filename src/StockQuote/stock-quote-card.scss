@@ -54,14 +54,14 @@
                 background: linear-gradient($stock-graph-green, $stock-graph-dark-green);
 
                 .stock-line-indicator {
-                    background: linear-gradient($white, darken($light-gray, 20%));
+                    background: linear-gradient($white, rgba(255, 255, 255, 0.1));
                 }
             }
             &.is-down {
                 background: linear-gradient($stock-graph-red, $stock-graph-dark-red);
 
                 .stock-line-indicator {
-                    background: linear-gradient(darken($light-gray, 20%), $white);
+                    background: linear-gradient(rgba(255, 255, 255, 0.1), $white);
                 }
             }
         }
