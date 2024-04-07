@@ -2,8 +2,7 @@
 
 .stock-card {
     display: flex;
-    margin: 5px;
-    background: $white;
+    padding: 10px;
     min-height: 105px;
 }
     .stock-card-left {
@@ -13,6 +12,7 @@
         align-items: center;
         position: relative;
 
+        // Styling for the stock graph
         .stock-graph {
             position: relative;
             height: 100%;
@@ -39,7 +39,7 @@
                 position: absolute;
                 left: 50%;
                 color: $white;
-                font-size: 0.65rem;
+                font-size: .5rem;
             }
 
             .stock-high {
@@ -50,6 +50,7 @@
                 bottom: 5%;
             }
 
+            // Change color of graph background and stock-line-indicator depending on stock data state
             &.is-up {
                 background: linear-gradient($stock-graph-green, $stock-graph-dark-green);
 
@@ -70,6 +71,7 @@
     .stock-card-right {
         flex-grow: 1;
         padding: 10px;
+        background-color: $white;
     }
 
 .stock-title {
@@ -103,4 +105,3 @@
         margin-right: 5px;
     }
 
-// @TODO - add styles for the stock graph

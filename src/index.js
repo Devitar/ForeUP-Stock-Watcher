@@ -46,6 +46,18 @@ document.addEventListener('DOMContentLoaded', () => {
         "09. change": "1.2000",
         "10. change percent": "0.6385%"
     };
+    const upTestData2 = {
+        "01. symbol": "IBM2",
+        "02. open": "188.5900",
+        "03. high": "190.3200",
+        "04. low": "188.0200",
+        "05. price": "189.1400",
+        "06. volume": "2012428",
+        "07. latest trading day": "2024-04-05",
+        "08. previous close": "187.9400",
+        "09. change": "1.2000",
+        "10. change percent": "0.6385%"
+    };
     const downTestData = {
         "01. symbol": "300135.SHZ",
         "02. open": "2.4700",
@@ -59,6 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "10. change percent": "-0.4082%"
     };
     addNewQuoteToCollection(upTestData, "IBM");
+    addNewQuoteToCollection(upTestData2, "IBM");
     addNewQuoteToCollection(downTestData, "SHZ");
 
     mainView.on('stockSearch', function(e) {

@@ -10,7 +10,7 @@ const usdFormat = new Intl.NumberFormat('en-US', {
 
 export const StockQuoteCard = Marionette.View.extend({
     tagName: 'section',
-    className: 'stock-card',
+    className: 'stock-card col-xs-12 col-md-6 col-lg-4',
     template: _.template(template),
 
     templateContext() {
