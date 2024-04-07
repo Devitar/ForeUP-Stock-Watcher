@@ -1,8 +1,7 @@
-
 @import "~bootstrap/scss/bootstrap";
+@import "./variables.scss";
 
 body {
-    // @TODO - replace the inline color with a SCSS variable from ./variables.scss
-    background: #f5f5f5;
+    background: $light-gray;
 }
 
