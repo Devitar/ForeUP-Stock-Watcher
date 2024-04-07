@@ -12,6 +12,59 @@
         display: flex;
         align-items: center;
         position: relative;
+
+        .stock-graph {
+            position: relative;
+            height: 100%;
+            width: 100%;
+            padding: 10%;
+
+            .stock-line-indicator {
+                position: absolute;
+                height: 80%;
+                width: 2px;
+                // Account for width
+                left: calc(35% - 2px);
+                top: 10%;
+            }
+
+            .stock-arrow {
+                color: $white;
+                position: absolute;
+                // Account for width of the line
+                left: calc(20% - 2px);
+            }
+
+            .stock-high, .stock-low {
+                position: absolute;
+                left: 50%;
+                color: $white;
+                font-size: 0.65rem;
+            }
+
+            .stock-high {
+                top: 5%;
+            }
+
+            .stock-low {
+                bottom: 5%;
+            }
+
+            &.is-up {
+                background: linear-gradient($stock-graph-green, $stock-graph-dark-green);
+
+                .stock-line-indicator {
+                    background: linear-gradient($white, darken($light-gray, 20%));
+                }
+            }
+            &.is-down {
+                background: linear-gradient($stock-graph-red, $stock-graph-dark-red);
+
+                .stock-line-indicator {
+                    background: linear-gradient(darken($light-gray, 20%), $white);
+                }
+            }
+        }
     }
 
     .stock-card-right {
