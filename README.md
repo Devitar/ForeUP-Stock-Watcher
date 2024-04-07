@@ -26,7 +26,7 @@ link.
 - [x] Add any JS, CSS or HTML necessary to display the graph portion of the
     `StockQuoteCard` as shown in the design mocks.
 - [x] Replace color values with variables from `./src/variables.scss`.
-- [ ] Add styles to `./src/Main/main.scss` so that the application matches the design.
+- [X] Add styles to `./src/Main/main.scss` so that the application matches the design.
 - [x] Complete the `mainView.on("stockSearch"...` callback function in `./src/index.js`
 - [x] Alphavantage returns a 200 response even in the cases that the symbol
     input by the user is not found, or we've exceeded the max number of requests

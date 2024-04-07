@@ -7,9 +7,6 @@
 }
     .stock-card-left {
         width: 80px;
-
-        display: flex;
-        align-items: center;
         position: relative;
 
         // Styling for the stock graph
@@ -24,7 +21,7 @@
                 height: 80%;
                 width: 2px;
                 // Account for width
-                left: calc(35% - 2px);
+                left: calc(25% - 2px);
                 top: 10%;
             }
 
@@ -32,12 +29,12 @@
                 color: $white;
                 position: absolute;
                 // Account for width of the line
-                left: calc(20% - 2px);
+                left: calc(5% - 2px);
             }
 
             .stock-high, .stock-low {
                 position: absolute;
-                left: 50%;
+                left: 35%;
                 color: $white;
                 font-size: .6rem;
                 font-weight: bold;
